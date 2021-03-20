@@ -1,0 +1,48 @@
+<div>
+    <h3>Товары</h3>
+    <form novalidate ng-submit="fillTable()">
+        <div class="form-group col-md-6">
+            <label for="titleInput">Название</label>
+            <input class="form-control" type="text" id="titleInput"
+                   ng-model="filterObj.title"/>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="minPriceInput">Минимальная цена</label>
+            <input class="form-control" type="number" id="minPriceInput"
+                   ng-model="filterObj.min_price"/>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="maxPriceInput">Максимальная цена</label>
+            <input class="form-control" type="number" id="maxPriceInput"
+                   ng-model="filterObj.max_price"/>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Применить</button>
+    </form>
+
+    <table class="table table-hover" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>Название</td>
+            <td>Цена</td>
+            <td>Действие</td>
+        </tr>
+        <tbody>
+
+        <tr ng-repeat="p in ProductsPage.content">
+            <td>{{p.title}}</td>
+            <td>{{p.price}}</td>
+            <td>
+                <button class="btn btn-success" ng-click="addToCart(p.id)">Добавить в корзину</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success" ng-click="fillTable()">Обновить</button>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item" ng-repeat="pageIndex in PaginationArray">
+                <a class="page-link" ng-click="fillTable(pageIndex)">{{pageIndex}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>

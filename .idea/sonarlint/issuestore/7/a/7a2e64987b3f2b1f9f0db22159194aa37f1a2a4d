@@ -1,0 +1,9 @@
+
+T
+java:S3655"7Call "Optional#isPresent()" before accessing the value.(¾–€ñ8—¯Šğ.
+}
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "products".(ŸçÉÊ8¬É±ó.
+]
+java:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(ëù‹‘8‚Ş“ğ.
+]
+java:S4684#"@Replace this persistent entity with a simple POJO or DTO object.(îÉÕ™8Õ¡ğ.
