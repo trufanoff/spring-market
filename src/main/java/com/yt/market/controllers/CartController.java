@@ -1,8 +1,5 @@
 package com.yt.market.controllers;
 
-import com.yt.market.entities.Product;
-import com.yt.market.exceptions.ResourceNotFoundException;
-import com.yt.market.services.ProductService;
 import com.yt.market.utils.Cart;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -14,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@Controller
-//@RequestMapping("/cart")
-//@AllArgsConstructor
+@Controller
+@RequestMapping("/cart")
+@AllArgsConstructor
 public class CartController {
     private Cart cart;
 

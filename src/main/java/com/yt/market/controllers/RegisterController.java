@@ -26,7 +26,7 @@ public class RegisterController {
         User u = userService.findByUsername(user.getUsername());
         if (u == null){
             userService.save(user);
-            return "redirect:/products";
+            return "redirect:/login";
         }
         return "register";
     }
